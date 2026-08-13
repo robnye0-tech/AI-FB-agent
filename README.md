@@ -43,12 +43,16 @@ tools.
 
 ## Why draft-and-approve instead of full auto-posting
 
-Auto-posting requires an Instagram Business account linked to a Facebook
-Page and a reviewed Meta Developer app with a long-lived access token —
-real setup overhead and an approval process on Meta's side. Starting with
-draft-and-approve means content generation is running from day one with no
-API setup, and full auto-posting can be added later once the account and
-Meta app are in place.
+Full API auto-posting via the Instagram Graph API needs a Meta Developer
+app, and pushing that app's Instagram permissions past Development mode
+requires Business Verification — Meta wants a bank account and tax ID on
+file. For a page just getting started, that's not worth it, so this
+project deliberately runs on draft-and-approve instead: no Meta Developer
+app, no API tokens, no verification. Two Cowork Routines write a finished
+carousel draft to `content/drafts/` every day; posting is a couple of
+minutes of manual work in the Instagram app. This can be revisited later
+if it's ever worth doing the business verification, but it isn't a
+blocker today.
 
 ## Brand assets
 
