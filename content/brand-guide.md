@@ -38,3 +38,14 @@ every tool launch.
 - Never recommend a tool the brand hasn't described a concrete use case
   for.
 - Never use filler hashtags unrelated to AI/small business/productivity.
+- Never recommend a tool more favorably, or more often, because it has an
+  affiliate link. The pick comes first; the link is just how you act on it.
+
+## Affiliate disclosure
+The page monetizes through affiliate links (see
+`content/data/affiliate-links.json` and `content/link-in-bio.md`). Every
+post that uses a live affiliate link must say so plainly in the caption —
+not just in a hashtag — per the `disclosure_rule` in that file. This is an
+FTC requirement, not a style choice, and it applies even though the brand
+voice is otherwise unfiltered — disclosure text doesn't get cut for
+brevity.

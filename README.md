@@ -21,15 +21,22 @@ tools.
    Each automated run picks the next `pending` entry, drafts it, and
    flips it to `used`. When the queue runs dry, the run invents one new
    on-brand topic and appends it.
-4. **Template** — [`content/templates/carousel-template.md`](content/templates/carousel-template.md)
-   is the structure every draft follows, plus the grounding rule: every
-   tool name, price, and feature claim must trace back to the JSON data.
-5. **Daily draft generation** — two scheduled Cowork Routines run each day
+4. **Affiliate links** — [`content/data/affiliate-links.json`](content/data/affiliate-links.json)
+   tracks which of the 20 tools have an affiliate program, the signup URL,
+   and (once Rob applies and is approved) the real tracking link. A draft
+   only uses a tool's affiliate link, adds the FTC-required disclosure, and
+   updates [`content/link-in-bio.md`](content/link-in-bio.md) when that
+   tool's `affiliate_url` is filled in — see "Monetization" below.
+5. **Template** — [`content/templates/carousel-template.md`](content/templates/carousel-template.md)
+   is the structure every draft follows, plus the grounding rule (every
+   tool name, price, and feature claim must trace back to the JSON data)
+   and the affiliate/disclosure rule.
+6. **Daily draft generation** — two scheduled Cowork Routines run each day
    (10am and 5pm ET), each picking the next topic and writing a full
    carousel draft into `content/drafts/YYYY-MM-DD-am.md` or
    `content/drafts/YYYY-MM-DD-pm.md`, updating `topics.json`, and
    committing/pushing the result.
-6. **Review & post** — drafts land in `content/drafts/`. Nothing posts to
+7. **Review & post** — drafts land in `content/drafts/`. Nothing posts to
    Instagram automatically — you review each draft, adjust if needed, and
    publish it yourself in the IG app. This keeps a human check on every
    post before it goes live.
@@ -58,6 +65,32 @@ re-checks all 20 tools' pricing every ~15 days (the 1st and 16th of each
 month) and updates `tools.json`'s `pricing` fields and `verified_date`
 automatically — no manual upkeep needed.
 
+## Monetization (affiliate links)
+
+`content/data/affiliate-links.json` has one entry per tool: whether it has
+a public affiliate program, the signup URL where known, reported
+commission terms, and an `affiliate_url` field that starts `null`.
+
+- **13 of the 20 tools have a real, applicable-today program**: Canva Pro,
+  Grammarly, Jasper, HubSpot Breeze AI, QuickBooks Online, Tidio, Freshdesk
+  (Freddy AI), Nextiva, HeyGen, Motion, Durable, folk, Descript.
+- **3 have no public affiliate option**: ChatGPT Business (OpenAI), Claude
+  Team (Anthropic), Dialpad Ai — these still work fine as unmonetized Tool
+  Spotlight content.
+- **Zapier, Notion AI, Fathom, Loom** are edge cases — Zapier's only
+  program targets agencies not media, Notion's program is reportedly
+  paused, Fathom's affiliate terms for individual creators weren't
+  confirmed, Loom wasn't confirmed either way. Check each `signup_url`
+  directly before assuming.
+
+Applying to each program (business info, tax form, payment details,
+approval) is something only Rob can do — once approved, paste the real
+tracking link into that tool's `affiliate_url` field. From then on, any
+post that references that tool automatically includes the link, the FTC
+disclosure sentence required by `disclosure_rule`, and an update to
+`content/link-in-bio.md` (Instagram only allows one clickable link, in the
+bio, so that file is what actually gets pasted into a Linktree-style page).
+
 ## Repo layout
 
 ```
@@ -65,14 +98,16 @@ brand/
   profile.md                 IG name, username, bio, category
   assets/                    Logo files (PNG + editable SVG)
 content/
-  brand-guide.md              Voice, audience, pillars, visual rules
+  brand-guide.md              Voice, audience, pillars, visual rules, disclosure policy
+  link-in-bio.md              Bio-link page content, auto-updated when affiliate links go live
   data/
     tools.json                 20 vetted AI tools with verified pricing
     comparisons.json           Tool-vs-tool pairs for Head-to-Head posts
     stacks.json                Tool bundles by business type for Shortlist posts
     topics.json                Rotating topic queue, tied to tool IDs
+    affiliate-links.json       Affiliate program status + tracking links per tool
   templates/
-    carousel-template.md      Structure + grounding rule every draft follows
+    carousel-template.md      Structure + grounding rule + affiliate rule every draft follows
   drafts/
     YYYY-MM-DD-am.md           Morning draft
     YYYY-MM-DD-pm.md           Evening draft
