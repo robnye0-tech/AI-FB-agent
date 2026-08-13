@@ -2,16 +2,30 @@
 
 Use this structure for every draft in `content/drafts/`. 6–8 slides.
 
+## Grounding rule (read this first)
+
+Every tool name, price, and feature claim in the draft MUST come from
+`content/data/tools.json` (and `comparisons.json`/`stacks.json` where the
+topic references one). Do not invent a price, a feature, or a tool that
+isn't in that file. If a topic needs a fact that isn't in the data files,
+write the slide without that specific number rather than guessing — never
+state a price or feature you can't point to in the JSON.
+
+## Structure
+
 ```
-TOPIC: <one-line topic, e.g. "5 AI tools for small business invoicing">
+TOPIC: <one-line topic, from content/data/topics.json>
 PILLAR: <Tool Spotlight | Head-to-Head | Shortlist | Mistake to Avoid | Free vs Paid>
+TOOLS USED: <tool id(s) from tools.json this draft draws facts from, or "none" for a Mistake to Avoid post>
 
 SLIDE 1 (hook):
 <Bold question or claim that stops the scroll. No branding, no title.>
 
 SLIDE 2..N-1 (body):
 <One idea per slide. Short headline + 1-2 supporting lines. For tool
-slides: tool name, the ONE thing it's good for, and a caveat if relevant.>
+slides: tool name (from tools.json), the ONE thing it's good for
+(from best_for/description), and the pricing note verbatim from
+tools.json's "pricing" field if the slide mentions a price.>
 
 SLIDE N (CTA):
 <Save/Follow prompt tied back to the page's promise.>
