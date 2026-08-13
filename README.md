@@ -53,10 +53,10 @@ horizontal logo is needed, with editable `.svg` sources for both.
 
 ## Keeping tool data current
 
-Pricing changes. `tools.json` has a `verified_date`. If it's been more
-than ~60 days, double-check any price before it goes out in a post — spot
-edits to the JSON are all that's needed, the generator picks them up
-automatically on the next run.
+Pricing changes. A third Cowork Routine ("AI Shortlist Pricing Refresh")
+re-checks all 20 tools' pricing every ~15 days (the 1st and 16th of each
+month) and updates `tools.json`'s `pricing` fields and `verified_date`
+automatically — no manual upkeep needed.
 
 ## Repo layout
 
