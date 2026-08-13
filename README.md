@@ -31,15 +31,21 @@ tools.
    is the structure every draft follows, plus the grounding rule (every
    tool name, price, and feature claim must trace back to the JSON data)
    and the affiliate/disclosure rule.
-6. **Daily draft generation** — two scheduled Cowork Routines run each day
-   (10am and 5pm ET), each picking the next topic and writing a full
+6. **Slide images** — [`scripts/generate_slides.py`](scripts/generate_slides.py)
+   renders every slide in a draft into a finished, on-brand PNG (dark
+   background, amber accent, matching the logo) — no Canva or manual
+   design work needed. Output goes to
+   `content/drafts/images/<draft-name>/slide-1.png`, `slide-2.png`, etc.
+7. **Daily draft generation** — two scheduled Cowork Routines run each day
+   (10am and 5pm ET), each picking the next topic, writing a full
    carousel draft into `content/drafts/YYYY-MM-DD-am.md` or
-   `content/drafts/YYYY-MM-DD-pm.md`, updating `topics.json`, and
-   committing/pushing the result.
-7. **Review & post** — drafts land in `content/drafts/`. Nothing posts to
-   Instagram automatically — you review each draft, adjust if needed, and
-   publish it yourself in the IG app. This keeps a human check on every
-   post before it goes live.
+   `content/drafts/YYYY-MM-DD-pm.md`, running `generate_slides.py` on it,
+   updating `topics.json`, and committing/pushing the result — draft text
+   and finished images both waiting by the time you check in.
+8. **Review & post** — drafts and their images land in `content/drafts/`.
+   Nothing posts to Instagram automatically — you review, adjust if
+   needed, and upload the images with the caption/hashtags yourself in
+   the IG app. This keeps a human check on every post before it goes live.
 
 ## Why draft-and-approve instead of full auto-posting
 
@@ -115,6 +121,9 @@ content/
   templates/
     carousel-template.md      Structure + grounding rule + affiliate rule every draft follows
   drafts/
-    YYYY-MM-DD-am.md           Morning draft
-    YYYY-MM-DD-pm.md           Evening draft
+    YYYY-MM-DD-am.md           Morning draft (text)
+    YYYY-MM-DD-pm.md           Evening draft (text)
+    images/YYYY-MM-DD-am/       Rendered slide-1.png, slide-2.png, ... for that draft
+scripts/
+  generate_slides.py          Renders a draft's SLIDE blocks into on-brand PNGs
 ```

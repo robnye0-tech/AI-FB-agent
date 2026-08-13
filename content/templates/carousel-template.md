@@ -2,6 +2,14 @@
 
 Use this structure for every draft in `content/drafts/`. 6–8 slides.
 
+After writing the draft file, run
+`python3 scripts/generate_slides.py content/drafts/<the-file>.md` to render
+every slide as a PNG (dark/amber brand style, no Canva needed) into
+`content/drafts/images/<the-file-stem>/slide-N.png`. The parser reads the
+exact structure below, so don't deviate from it — inline text after a
+`SLIDE N:` label, or the next line(s) as the slide body, both work, but the
+`SLIDE`/`CAPTION`/`HASHTAGS`/`IMAGE BRIEF` labels must match exactly.
+
 ## Grounding rule (read this first)
 
 Every tool name, price, and feature claim in the draft MUST come from
