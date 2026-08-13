@@ -53,7 +53,9 @@ Meta app are in place.
 ## Brand assets
 
 [`brand/profile.md`](brand/profile.md) has the Instagram name, username,
-bio copy, and category to use when setting up the page.
+bio copy, and category. [`brand/facebook-page.md`](brand/facebook-page.md)
+has the matching Facebook Page name, category, short bio, and longer
+About/Story copy.
 [`brand/assets/`](brand/assets/) has the logo: `profile-icon-1080.png`
 for the IG profile picture and `wordmark-logo.png` for anywhere a
 horizontal logo is needed, with editable `.svg` sources for both.
