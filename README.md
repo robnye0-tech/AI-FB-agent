@@ -14,10 +14,11 @@ tools.
 3. **Template** — [`content/templates/carousel-template.md`](content/templates/carousel-template.md)
    is the structure every draft follows: hook slide, body slides, CTA
    slide, caption, hashtags, image brief.
-4. **Daily draft generation** — a scheduled Cowork Routine runs once a day,
-   picks the next topic, writes a full carousel draft into
-   `content/drafts/YYYY-MM-DD.md`, checks off the topic in the backlog, and
-   commits/pushes the result.
+4. **Daily draft generation** — two scheduled Cowork Routines run each day
+   (10am and 5pm ET), each picking the next topic and writing a full
+   carousel draft into `content/drafts/YYYY-MM-DD-am.md` or
+   `content/drafts/YYYY-MM-DD-pm.md`, checking off the topic in the
+   backlog, and committing/pushing the result.
 5. **Review & post** — drafts land in `content/drafts/`. Nothing posts to
    Instagram automatically — you review each draft, adjust if needed, and
    publish it yourself in the IG app. This keeps a human check on every
