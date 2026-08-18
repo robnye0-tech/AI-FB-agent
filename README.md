@@ -1,4 +1,4 @@
-# Signal — Brand Launch Package v1.0
+# Steadyline — Brand Launch Package v1.0
 
 Done-for-you AI phone/text answering and booking for owner-operator local
 service businesses (contractors, salons/spas, gyms/studios). A static
@@ -6,11 +6,6 @@ marketing site: no build step, no framework, no backend — matches the v1.0
 brief's "simple one-page site + direct outreach" channel.
 
 Full brand spec this build implements: [`docs/brand-launch-package.md`](docs/brand-launch-package.md).
-
-> **"Signal" is a placeholder brand name** (it echoes the palette's "Signal
-> Orange"), chosen because the source brief doesn't name the company. It
-> appears in `<title>` tags, nav/footer, and meta descriptions across every
-> page — find-and-replace it before launch if a different name is final.
 
 ## Structure
 
@@ -54,17 +49,15 @@ available; there's no photography in this v1.0 build to replace stock with.
 
 1. **Booking embed** — `book-a-call.html` has a clearly marked placeholder
    (search for `TODO (launch)`) where a real Calendly/Cal.com/Acuity embed
-   needs to go. The fallback `mailto:hello@example.com` link should also be
-   swapped for a real inbox.
-2. **Brand name** — replace "Signal" everywhere if a different name is final
-   (nav, footer, `<title>`, meta descriptions, `docProps`/copy references).
-3. **Deploy target** — every internal link and asset path is root-relative
+   needs to go. The fallback `mailto:hello@steadyline.com` link should also
+   be swapped for a real inbox once that domain/address exists.
+2. **Deploy target** — every internal link and asset path is root-relative
    (`/index.html`, `/assets/...`), which assumes the site is served from a
    domain root (Netlify, Vercel, Cloudflare Pages, or a custom domain all
    work as-is). If deploying to a GitHub Pages *project* site
    (`user.github.io/repo/`), either add a custom domain or prefix every
    root-relative path with `/repo/`.
-4. **Analytics/forms** — none wired up yet; add before running paid traffic.
+3. **Analytics/forms** — none wired up yet; add before running paid traffic.
 
 ## Reserved nav slots (v2.0)
 
