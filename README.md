@@ -1,9 +1,14 @@
 # Steadyline — Brand Launch Package v1.0
 
 Done-for-you AI phone/text answering and booking for owner-operator local
-service businesses (contractors, salons/spas, gyms/studios). A static
-marketing site: no build step, no framework, no backend — matches the v1.0
-brief's "simple one-page site + direct outreach" channel.
+service businesses (contractors, salons/spas, gyms/studios). This repo root
+is a static marketing site: no build step, no framework, no backend —
+matches the v1.0 brief's "simple one-page site + direct outreach" channel.
+
+The actual product — the authenticated dashboard where a business signs up,
+connects their calendar/phone number, and configures their AI assistant —
+lives in [`dashboard/`](dashboard/README.md), a separate Next.js app with
+its own deploy pipeline so it can never break the marketing site above.
 
 Full brand spec this build implements: [`docs/brand-launch-package.md`](docs/brand-launch-package.md).
 
@@ -24,6 +29,7 @@ assets/css/styles.css    Full design system (colors, type, components)
 assets/js/main.js        Mobile nav toggle only — no other JS
 assets/img/              Brand mark + flat line icons (no stock imagery)
 docs/brand-launch-package.md  Full transcribed brief (source of truth)
+dashboard/                The real product — see dashboard/README.md
 ```
 
 ## Brand system
