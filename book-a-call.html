@@ -30,39 +30,53 @@
 
 <main>
 
-  <section class="hero" style="padding:64px 0 56px;">
-    <div class="container text-center">
+  <section class="hero" style="padding:64px 0 0;">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container text-center" style="padding-bottom:56px;">
       <span class="eyebrow">Book a Free Setup Call</span>
       <h1 class="mx-auto" style="max-width:680px;">See exactly how it'd work for your business &mdash; no commitment.</h1>
       <p class="lede mx-auto">15 minutes. We'll look at your call volume, how you book jobs today, and what setup would look like for you.</p>
     </div>
+    <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 40 C 240 90 480 0 720 30 C 960 60 1200 10 1440 40 L1440 80 L0 80 Z" fill="#F7F5F2"/>
+    </svg>
   </section>
 
   <section class="section section--white">
     <div class="container">
-      <div class="booking-panel">
-        <!--
-          TODO (launch): replace this placeholder with a live calendar embed
-          (Calendly, Cal.com, Acuity, etc.) before going live. Example for Calendly:
-
-          <div class="calendly-inline-widget" data-url="https://calendly.com/your-handle/setup-call" style="min-width:320px;height:640px;"></div>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-        -->
-        <div class="booking-placeholder">
-          <h3 class="mt-0">Calendar booking goes here</h3>
-          <p>Drop in your Calendly, Cal.com, or Acuity embed and this placeholder disappears. Until then, reach out directly below.</p>
-          <code>&lt;!-- Calendly / Cal.com embed --&gt;</code>
+      <div class="book-grid">
+        <div class="book-reassure reveal">
+          <h2>What to expect on the call</h2>
+          <ul class="book-reassure-list">
+            <li><span class="check">&#10003;</span> We look at your actual call &amp; text volume &mdash; no generic pitch</li>
+            <li><span class="check">&#10003;</span> You see exactly how the AI answers and books before committing</li>
+            <li><span class="check">&#10003;</span> A straight, scoped quote &mdash; no pressure, no contract on the call</li>
+            <li><span class="check">&#10003;</span> 15 minutes, done. If it's not a fit, we'll tell you</li>
+          </ul>
+          <p class="lede" style="margin-top:24px;">Built for contractors, salons, and gyms who are too busy doing the work to chase down every missed call.</p>
         </div>
-        <p style="margin-top:24px;">Or reach out directly:</p>
-        <a class="btn btn-primary btn-block" href="mailto:hello@steadyline.com?subject=Free%20Setup%20Call">Email hello@steadyline.com &rarr;</a>
-        <span class="btn-sub">We'll reply with times that work.</span>
-      </div>
-    </div>
-  </section>
 
-  <section class="section section--navy section--tight">
-    <div class="container text-center">
-      <p class="lede mx-auto" style="text-align:center;">Built for contractors, salons, and gyms who are too busy doing the work to chase down every missed call.</p>
+        <div class="booking-panel reveal">
+          <!--
+            TODO (launch): replace this placeholder with a live calendar embed
+            (Calendly, Cal.com, Acuity, etc.) before going live. Example for Calendly:
+
+            <div class="calendly-inline-widget" data-url="https://calendly.com/your-handle/setup-call" style="min-width:320px;height:640px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+          -->
+          <div class="booking-placeholder">
+            <h3 class="mt-0">Calendar booking goes here</h3>
+            <p>Drop in your Calendly, Cal.com, or Acuity embed and this placeholder disappears. Until then, reach out directly below.</p>
+            <code>&lt;!-- Calendly / Cal.com embed --&gt;</code>
+          </div>
+          <p style="margin-top:24px;">Or reach out directly:</p>
+          <a class="btn btn-primary btn-block" href="mailto:hello@steadyline.com?subject=Free%20Setup%20Call">
+            <span class="btn-pulse" aria-hidden="true"></span>
+            Email hello@steadyline.com <span class="arrow">&rarr;</span>
+          </a>
+          <span class="btn-sub">We'll reply with times that work.</span>
+        </div>
+      </div>
     </div>
   </section>
 

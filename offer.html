@@ -30,27 +30,31 @@
 
 <main>
 
-  <section class="hero" style="padding:64px 0 56px;">
-    <div class="container">
+  <section class="hero" style="padding:64px 0 0;">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container" style="padding-bottom:56px;">
       <span class="eyebrow">Core Offer</span>
-      <h1 style="font-size:clamp(2rem,4.5vw,2.75rem);">Done-for-you AI setup that solves the #1 pain point: missed leads and slow follow-up.</h1>
+      <h1 style="font-size:clamp(2rem,4.5vw,2.75rem);max-width:760px;">Done-for-you AI setup that solves the #1 pain point: missed leads and slow follow-up.</h1>
       <p class="lede">An AI phone/text answering + booking assistant that captures every inquiry, answers common questions, and books the appointment automatically — even after hours.</p>
     </div>
+    <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 40 C 240 90 480 0 720 30 C 960 60 1200 10 1440 40 L1440 80 L0 80 Z" fill="#F7F5F2"/>
+    </svg>
   </section>
 
   <section class="section section--white section--bordered">
     <div class="container">
-      <span class="eyebrow">Who It's For</span>
-      <h2>Owner-operator local service businesses, 1&ndash;10 employees</h2>
-      <p class="lede">Contractors (plumbers, electricians, HVAC), salons and spas, gyms and studios. If you get steady inbound calls and texts, lose revenue on every missed one, and don't have time to build automation yourself — this is built for you.</p>
+      <span class="eyebrow reveal">Who It's For</span>
+      <h2 class="reveal">Owner-operator local service businesses, 1&ndash;10 employees</h2>
+      <p class="lede reveal">Contractors (plumbers, electricians, HVAC), salons and spas, gyms and studios. If you get steady inbound calls and texts, lose revenue on every missed one, and don't have time to build automation yourself — this is built for you.</p>
     </div>
   </section>
 
   <section class="section section--white">
     <div class="container">
-      <span class="eyebrow">What's Included</span>
-      <h2>Everything you need, set up for you</h2>
-      <ul class="offer-list" style="max-width:720px;">
+      <span class="eyebrow reveal">What's Included</span>
+      <h2 class="reveal">Everything you need, set up for you</h2>
+      <ul class="offer-list reveal" style="max-width:720px;">
         <li>
           <span class="check">&#10003;</span>
           <div><strong>AI phone &amp; text answering</strong> connected to your existing business number — every call and message gets an instant, on-brand response, day or night.</div>
@@ -76,28 +80,31 @@
   </section>
 
   <section class="section section--navy">
-    <div class="container">
+    <div class="container reveal">
       <span class="eyebrow">What It Costs</span>
       <h2>Scoped to your call volume — no generic package</h2>
       <p class="lede">Every business gets a different number of calls and texts, so we quote setup on the call once we know your volume and how you book jobs today. Book a free setup call and we'll walk through it — no commitment.</p>
-      <a href="/book-a-call.html" class="btn btn-primary">Book a Free Setup Call &rarr;</a>
+      <a href="/book-a-call.html" class="btn btn-primary">
+        <span class="btn-pulse" aria-hidden="true"></span>
+        Book a Free Setup Call <span class="arrow">&rarr;</span>
+      </a>
     </div>
   </section>
 
   <section class="section section--white">
     <div class="container">
-      <span class="eyebrow">Expected Results</span>
-      <h2>Every claim ties back to leads saved, jobs booked, hours freed</h2>
+      <span class="eyebrow reveal">Expected Results</span>
+      <h2 class="reveal">Every claim ties back to leads saved, jobs booked, hours freed</h2>
       <div class="grid-3">
-        <div class="card">
+        <div class="card reveal reveal-1">
           <h3>Leads saved</h3>
           <p>Every call and text gets answered — the inquiries that used to go to voicemail turn into booked jobs instead.</p>
         </div>
-        <div class="card">
+        <div class="card reveal reveal-2">
           <h3>Jobs booked</h3>
           <p>Appointments land on your calendar automatically, so more inquiries turn into paid work without you chasing them down.</p>
         </div>
-        <div class="card">
+        <div class="card reveal reveal-3">
           <h3>Hours freed</h3>
           <p>You stop stopping mid-job to answer the phone. Follow-up happens without you lifting a finger.</p>
         </div>
@@ -106,14 +113,18 @@
   </section>
 
   <section class="cta-band">
-    <div class="container">
+    <div class="container reveal">
       <h2>Ready to see it for your business?</h2>
       <p class="lede mx-auto" style="color:#fff;opacity:.9;">See exactly how it'd work for your business — no commitment.</p>
-      <a href="/book-a-call.html" class="btn btn-primary">Book a Free Setup Call &rarr;</a>
+      <a href="/book-a-call.html" class="btn btn-primary">Book a Free Setup Call <span class="arrow">&rarr;</span></a>
     </div>
   </section>
 
 </main>
+
+<div class="mobile-cta-bar">
+  <a href="/book-a-call.html" class="btn btn-primary">Book a Free Setup Call &rarr;</a>
+</div>
 
 <footer class="site-footer">
   <div class="container">
