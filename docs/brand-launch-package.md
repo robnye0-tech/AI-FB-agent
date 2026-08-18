@@ -7,6 +7,23 @@
 Done-For-You AI Lead Capture for Local Service Businesses
 Prepared for launch — build target: end of this week.
 
+## Addendum — Pricing Went Live
+
+The original brief (Sections 5 and 8 below) treats `/pricing` as reserved
+until pricing goes public. That decision has now been made explicitly:
+
+- **14-day free trial, then $299/month**, flat — one plan, no tiers
+- Checkout via a Stripe Payment Link (see the "Payments" section of
+  `README.md` for setup)
+- `/pricing.html` is a real, live page — no longer a redirect stub
+- Every primary CTA site-wide ("Start Free Trial") now points at
+  `/pricing.html` first, rather than straight to booking a call, so price
+  is visible before a payment form. "Book a Free Setup Call" remains
+  available everywhere as the no-commitment, talk-first alternative.
+
+Everything else in this document (voice, visual system, site architecture,
+v1.0 copy) is unchanged and still governs.
+
 ## 1. Brand Roadmap & Version Planning
 
 **v1.0 — Build This Week**
@@ -131,10 +148,13 @@ doing the work to chase down every missed call.
 **Website**
 - [x] Homepage live with headline, subheadline, value props, CTA
 - [x] Core Offer section/page complete
+- [x] Pricing page live — 14-day free trial, $299/month (see Addendum above)
+- [ ] Pricing page connected to a real Stripe Payment Link (placeholder —
+      see "Payments" in README.md before going live)
 - [ ] Book a Call page connected to a working calendar (placeholder embed —
       swap in a real Calendly/Cal.com link before going live)
 - [x] Placeholder nav slots created (`/for/contractors`, `/for/salons`,
-      `/for/gyms`, `/results`, `/pricing`)
+      `/for/gyms`, `/results`, `/resources`)
 - [x] Mobile check complete
 
 **Go-To-Market**

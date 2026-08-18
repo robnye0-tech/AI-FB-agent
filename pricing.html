@@ -4,22 +4,147 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing — Steadyline</title>
-<meta http-equiv="refresh" content="3; url=/book-a-call.html">
-<meta name="robots" content="noindex">
+<meta name="description" content="Try Steadyline free for 2 weeks, then $299/month. Done-for-you AI phone &amp; text answering and booking for local service businesses.">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/styles.css">
-<!-- Reserved v2.0 slot: standalone pricing page, for when pricing goes public. Until then, sends visitors to book a call. -->
+<!--
+  PAYMENTS SETUP (do this before launch):
+  1. Create a Stripe account at https://dashboard.stripe.com/register (if you don't have one).
+  2. Products > Add product: "Steadyline Monthly Service", price $299.00 USD, Recurring monthly.
+  3. On that product's Payment Link, enable "Free trial" and set it to 14 days.
+  4. Copy the generated Payment Link URL (looks like https://buy.stripe.com/xxxxxxxx).
+  5. Replace every "https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK" in this repo
+     with that real URL (it appears in this file's CTA buttons, plus the nav/hero/CTA
+     buttons on index.html, offer.html, and book-a-call.html).
+  Full walkthrough: see the "Payments" section of README.md.
+-->
 </head>
 <body>
-<section class="coming-soon">
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="/index.html">
+      <img class="brand-mark" src="/assets/img/mark.svg" alt="">
+      Steadyline
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <div class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/offer.html">Core Offer</a>
+      <a href="/pricing.html">Pricing</a>
+      <a href="#trial" class="btn btn-primary">Start Free Trial</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" style="padding:64px 0 0;">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container text-center" style="padding-bottom:56px;">
+      <span class="eyebrow">Pricing</span>
+      <h1 class="mx-auto" style="max-width:680px;">Simple pricing. No generic packages, no surprises.</h1>
+      <p class="lede mx-auto">Try the full done-for-you setup free for two weeks. If it's not saving you jobs, cancel before it ever costs you a dime.</p>
+    </div>
+    <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 40 C 240 90 480 0 720 30 C 960 60 1200 10 1440 40 L1440 80 L0 80 Z" fill="#F7F5F2"/>
+    </svg>
+  </section>
+
+  <section class="section section--white" id="trial">
+    <div class="container">
+      <div class="pricing-card reveal">
+        <span class="pricing-badge"><span class="dot"></span>14-Day Free Trial</span>
+        <div class="price-row">
+          <span class="price-amount">$299</span>
+          <span class="price-period">/ month</span>
+        </div>
+        <p class="price-sub">after your free trial &mdash; billed monthly, cancel anytime</p>
+
+        <ul class="pricing-features">
+          <li><span class="check">&#10003;</span> AI phone &amp; text answering, connected to your existing number</li>
+          <li><span class="check">&#10003;</span> Automatic appointment booking straight to your calendar</li>
+          <li><span class="check">&#10003;</span> Common-question handling, tuned to your business</li>
+          <li><span class="check">&#10003;</span> Done-for-you setup &mdash; no tech skills needed</li>
+          <li><span class="check">&#10003;</span> A walkthrough before it ever answers a real call</li>
+        </ul>
+
+        <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK" class="btn btn-primary btn-block">
+          <span class="btn-pulse" aria-hidden="true"></span>
+          Start Your Free Trial <span class="arrow">&rarr;</span>
+        </a>
+        <p class="pricing-note">No charge for 14 days. We'll email a reminder before your trial ends.</p>
+        <a href="/book-a-call.html" class="pricing-talk-first">Prefer to talk it through first? Book a free call &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white section--bordered">
+    <div class="container">
+      <span class="eyebrow reveal">What Happens Next</span>
+      <h2 class="reveal">From signup to live in days, not months.</h2>
+      <div class="steps">
+        <div class="step reveal reveal-1">
+          <h3>Start your trial</h3>
+          <p>Two minutes to sign up. You won't be charged until your 14 days are up.</p>
+        </div>
+        <div class="step reveal reveal-2">
+          <h3>We connect your line</h3>
+          <p>We reach out within one business day to hook the AI assistant up to your existing number.</p>
+        </div>
+        <div class="step reveal reveal-3">
+          <h3>You review, then go live</h3>
+          <p>You see exactly how it answers and books before it ever touches a real caller.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container reveal">
+      <h2>Still deciding? Talk it through first.</h2>
+      <p class="lede mx-auto" style="color:#fff;opacity:.9;">15 minutes, no commitment. We'll look at your call volume and answer every question before you enter a card.</p>
+      <a href="/book-a-call.html" class="btn btn-primary" style="background:#1B2A41;">Book a Free Setup Call <span class="arrow">&rarr;</span></a>
+    </div>
+  </section>
+
+</main>
+
+<div class="mobile-cta-bar">
+  <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK" class="btn btn-primary">Start Your Free Trial &rarr;</a>
+</div>
+
+<footer class="site-footer">
   <div class="container">
-    <span class="eyebrow">Coming Soon</span>
-    <h1>Pricing isn't public yet.</h1>
-    <p class="lede mx-auto" style="text-align:center;">Setup is scoped to your call volume on a free call &mdash; no generic package. Taking you there now.</p>
-    <p><a href="/book-a-call.html" class="btn btn-primary">Book a Free Setup Call &rarr;</a></p>
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="/index.html"><img class="brand-mark" src="/assets/img/mark.svg" alt="">Steadyline</a>
+        <p style="opacity:.75;margin-top:14px;max-width:320px;">Built for contractors, salons, and gyms who are too busy doing the work to chase down every missed call.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <a href="/index.html">Home</a>
+        <a href="/offer.html">Core Offer</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/book-a-call.html">Book a Call</a>
+      </div>
+      <div>
+        <h4>For Your Industry</h4>
+        <a href="/for/contractors.html">Contractors</a>
+        <a href="/for/salons.html">Salons &amp; Spas</a>
+        <a href="/for/gyms.html">Gyms &amp; Studios</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Steadyline. All rights reserved.</span>
+      <span><a href="/results.html" style="display:inline;opacity:1;">Results</a> &middot; <a href="/resources.html" style="display:inline;opacity:1;">Resources</a></span>
+    </div>
   </div>
-</section>
-<script>window.location.replace("/book-a-call.html");</script>
+</footer>
+
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
