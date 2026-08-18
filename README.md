@@ -53,29 +53,29 @@ static site with zero backend and no secret keys anywhere in the repo.
 Payment Links natively support a free-trial period on a recurring price,
 which is exactly this offer.
 
-The site currently ships with a placeholder in place of the real link:
-`https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK`. It appears in
-exactly two places — both in `pricing.html` (the pricing-card CTA button and
-the mobile floating CTA bar). Every other "Start Free Trial" button
-site-wide (nav, hero, CTA bands) links to `/pricing.html` itself rather than
-straight to checkout, so visitors see the price before they see a payment
-form — replace only those two placeholder occurrences and the whole funnel
-is wired up.
+The site currently ships wired to a **Stripe TEST-mode Payment Link**
+(`https://buy.stripe.com/test_...`), so checkouts through it do not move
+real money. It appears in exactly two places — both in `pricing.html` (the
+pricing-card CTA button and the mobile floating CTA bar). Every other
+"Start Free Trial" button site-wide (nav, hero, CTA bands) links to
+`/pricing.html` itself rather than straight to checkout, so visitors see
+the price before they see a payment form.
 
-**To finish setup:**
+**Before taking real payments:**
 
-1. Create a Stripe account at [dashboard.stripe.com/register](https://dashboard.stripe.com/register)
-   if you don't have one (needs your real business/bank details — this step
+1. In the Stripe Dashboard, switch to **Live mode** (the account itself is
+   already created — needs your real business/bank details verified, which
    has to be done by you, not by this build).
-2. In the Stripe Dashboard: **Product catalog → Add product**.
+2. Recreate the same product/price there if it doesn't already exist:
    - Name: "Steadyline Monthly Service"
    - Price: `$299.00 USD`, **Recurring**, billed **monthly**
-3. Create a **Payment Link** for that price. In the Payment Link's options,
-   turn on **"Free trial"** and set it to **14 days**.
-4. Copy the generated URL (looks like `https://buy.stripe.com/xxxxxxxx`).
-5. Replace both occurrences of
-   `https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK` in `pricing.html`
-   with that real URL.
+3. Create a **Payment Link** for that live price. In the Payment Link's
+   options, turn on **"Free trial"** and set it to **14 days**.
+4. Copy the generated live URL (looks like `https://buy.stripe.com/xxxxxxxx`,
+   no `test_` prefix).
+5. Replace both occurrences of the current
+   `https://buy.stripe.com/test_8x2dR88qL1AJ1fYfye6Ri00` link in
+   `pricing.html` with that real live URL.
 6. Optional but recommended: in the Payment Link's settings, set an
    **after-payment confirmation redirect** to a real page on your domain
    (once deployed) so customers land on your site instead of Stripe's

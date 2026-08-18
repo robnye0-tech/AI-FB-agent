@@ -11,15 +11,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/styles.css">
 <!--
-  PAYMENTS SETUP (do this before launch):
-  1. Create a Stripe account at https://dashboard.stripe.com/register (if you don't have one).
-  2. Products > Add product: "Steadyline Monthly Service", price $299.00 USD, Recurring monthly.
-  3. On that product's Payment Link, enable "Free trial" and set it to 14 days.
-  4. Copy the generated Payment Link URL (looks like https://buy.stripe.com/xxxxxxxx).
-  5. Replace every "https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK" in this repo
-     with that real URL (it appears in this file's CTA buttons, plus the nav/hero/CTA
-     buttons on index.html, offer.html, and book-a-call.html).
-  Full walkthrough: see the "Payments" section of README.md.
+  PAYMENTS: currently wired to a Stripe TEST-mode Payment Link
+  (https://buy.stripe.com/test_...), so checkouts here do not take real
+  money. Before launch, create the equivalent Payment Link on the Stripe
+  account's LIVE side and swap it in below (and in the mobile CTA bar
+  further down this file). Full walkthrough: see the "Payments" section
+  of README.md.
 -->
 </head>
 <body>
@@ -72,7 +69,7 @@
           <li><span class="check">&#10003;</span> A walkthrough before it ever answers a real call</li>
         </ul>
 
-        <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK" class="btn btn-primary btn-block">
+        <a href="https://buy.stripe.com/test_8x2dR88qL1AJ1fYfye6Ri00" class="btn btn-primary btn-block">
           <span class="btn-pulse" aria-hidden="true"></span>
           Start Your Free Trial <span class="arrow">&rarr;</span>
         </a>
@@ -114,7 +111,7 @@
 </main>
 
 <div class="mobile-cta-bar">
-  <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK" class="btn btn-primary">Start Your Free Trial &rarr;</a>
+  <a href="https://buy.stripe.com/test_8x2dR88qL1AJ1fYfye6Ri00" class="btn btn-primary">Start Your Free Trial &rarr;</a>
 </div>
 
 <footer class="site-footer">
